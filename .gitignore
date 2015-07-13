@@ -18,4 +18,5 @@ application.log.*
 eclipse/
 target/
 build/
-
+.gradle
+.gradletasknamecache
