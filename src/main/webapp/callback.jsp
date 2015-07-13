@@ -8,7 +8,6 @@
 	String token = request.getParameter("token");
 
 	String state = request.getParameter("state");
-	System.out.println("state:" + state);
 	
 	//get env variables
 	String endpoint = application.getInitParameter("proxyIdEndpoint");
