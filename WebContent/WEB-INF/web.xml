@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://java.sun.com/xml/ns/javaee" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd" id="WebApp_ID" version="3.0">
+  <display-name>viggle-identity-partner-reference-app</display-name>
+  <context-param>
+    <param-name>tokenEndpoint</param-name>
+    <param-value>https://identity-stage.viggle.com/authorize</param-value>
+  </context-param>
+  <context-param>
+    <param-name>proxyIdEndpoint</param-name>
+    <param-value>https://identity-stage.viggle.com/proxyid</param-value>
+  </context-param>
+  <context-param>
+    <param-name>sapiEndpoint</param-name>
+    <param-value>https://sapi-stage.choosedigital.com</param-value>
+  </context-param>
+  <context-param>
+    <param-name>accessKey</param-name>
+    <param-value>1F89B09AB322C40C1DA2D8484E090D93</param-value>
+  </context-param>
+  <context-param>
+    <param-name>secret</param-name>
+    <param-value>U9zMi6U1bhNjnR4wRD12r3vsnHlcm5Rhm4AFMGKOP8d04dMyXLyWNcasD2xW0XL</param-value>
+  </context-param>
+  <welcome-file-list>
+    <welcome-file>index.jsp</welcome-file>
+  </welcome-file-list>
+</web-app>
