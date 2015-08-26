@@ -83,35 +83,60 @@
 	JSONObject json = new JSONObject(resultText);
 	String proxyId = json.getString("proxyId");
 %>
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>Callback</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<title>Content</title>
+	<link rel="stylesheet" href="style.css" type="text/css" media="screen">
 </head>
 <body>
 
-<h1>Callback</h1>
+<div id="pg-container">
+	
+	<%@ include file="_header.jsp" %>
 
-<p>
-Token: <%=token %>
-</p>
+	<div class="row">
+		<div class="small-10 small-centered medium-8 columns">
 
-<p>
-proxyId: <%=proxyId %>
-</p>
+			<h1>Your Viggle Account is Connected!</h1>
 
-<p>
-state: <%=state %>
-</p>
+			<div class="callout">
+		
+				<h3>What just happened:</h3>
+				<p>The Viggle member has authorized this Viggle Partner to use the Viggle API to get member information and deposit points. But isn't allowed to withdraw any points.</p>
+	
+				<ul>
+					<li><a href="sapi-user.jsp?proxyId=<%=proxyId %>">Get User Info</a></li>
+					<li><a href="sapi-deposit.jsp?proxyId=<%=proxyId %>">Deposit</a></li>
+				</ul>
+	
+				<p>The Viggle member can de-authorize this partner from their profile page at <a href="https://identity-stage.viggle.com">Viggle</a>.</p>
 
-<h2>SAPI calls</h2>
+			</div>
 
-<p><a href="sapi-user.jsp?proxyId=<%=proxyId %>">Get User</a></p>
+		</div>
 
-<p><a href="sapi-deposit.jsp?proxyId=<%=proxyId %>">Deposit</a></p>
+	</div>
 
-<p><a href="sapi-withdrawal.jsp?proxyId=<%=proxyId %>">Withdrawal</a></p>
+</div>
+
+<footer>
+	<small><code>
+	Current Time: <%  out.println(new java.util.Date().toString()); %>
+	</code></small>
+
+<!-- <p><a href="sapi-withdrawal.jsp?proxyId=<%=proxyId %>">Withdrawal</a></p> -->
+
+</footer>
+
+<script>
+	console.log('Token: <%=token %>');
+	console.log('proxyId: <%=proxyId %>');
+	console.log('state: <%=state %>');
+</script>
+
 
 </body>
 </html>

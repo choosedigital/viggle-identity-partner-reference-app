@@ -112,21 +112,49 @@
 %>
 
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>SAPI - Deposit</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<title>Content</title>
+	<link rel="stylesheet" href="style.css" type="text/css" media="screen">
 </head>
 <body>
 
-	<h1>SAPI - Deposit</h1>
+<div id="pg-container">
 	
-	<p>Response Code: <%=responseCode %></p>
-	
-	<p>
-		 Response:
-		<%= resultText %>
-	</p>
+	<%@ include file="_header.jsp" %>
+
+	<div class="row">
+		<div class="small-10 small-centered medium-8 columns">
+
+			<h1>Viggle API: Deposit</h1>
+
+			<p><b>Response Code:</b> <%=responseCode %></p>
+
+			<div class="callout">
+		
+				<h3>Awarding Viggle Points</h3>
+				<p>With access to the Viggle Points API and a Viggle Member’s authorization, Viggle Partners can incentivize their own customers by awarding Viggle Points whenever they decide.</p>
+				<p>The points go directly into the Viggle account and is available for them to use in the Viggle Store or other authorized outlets immediately. </p>
+
+				<h4>API response</h4>
+				<pre><%= resultText %></pre>
+
+			</div>
+
+		</div>
+
+	</div>
+
+</div>
+
+<footer>
+	<small><code>
+	Current Time: <%  out.println(new java.util.Date().toString()); %>
+	</code></small>
+
+</footer>
 
 
 </body>

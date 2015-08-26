@@ -15,11 +15,11 @@
   </context-param>
   <context-param>
     <param-name>accessKey</param-name>
-    <param-value>YOUR ACCESS KEY HERE</param-value>
+    <param-value>1F89B09AB322C40C1DA2D8484E090D93</param-value>
   </context-param>
   <context-param>
     <param-name>secret</param-name>
-    <param-value>YOUR SECRET HERE</param-value>
+    <param-value>U9zMi6U1bhNjnR4wRD12r3vsnHlcm5Rhm4AFMGKOP8d04dMyXLyWNcasD2xW0XL</param-value>
   </context-param>
   <welcome-file-list>
     <welcome-file>index.jsp</welcome-file>

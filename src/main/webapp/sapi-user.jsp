@@ -68,20 +68,45 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>SAPI - Get User</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<title>Content</title>
+	<link rel="stylesheet" href="style.css" type="text/css" media="screen">
 </head>
 <body>
 
-	<h1>SAPI - Get User</h1>
+<div id="pg-container">
 	
-	<p>
-		proxyId: <%=proxyId %>
-	</p>
-	
-	<p>
-		<%= resultText %>
-	</p>
+	<%@ include file="_header.jsp" %>
+
+	<div class="row">
+		<div class="small-10 small-centered medium-8 columns">
+
+			<h1>Viggle API: GetUser</h1>
+
+			<p><b>proxyId:</b> <%=proxyId %></p>
+
+			<div class="callout">
+		
+				<h3>What’s this?:</h3>
+				<p>Once authorized, the Viggle Partner can use the Viggle Points API to have (limited) access to the Viggler’s account using the <b>proxyId</b> in place of the Viggle Member ID.</p>
+				<pre><%= resultText %></pre>
+
+			</div>
+
+			<p><a class="btn" href="sapi-deposit.jsp?proxyId=<%=proxyId %>">Award 25 Points (deposit)</a></p>
+
+		</div>
+
+	</div>
+
+</div>
+
+<footer>
+	<small><code>
+	Current Time: <%  out.println(new java.util.Date().toString()); %>
+	</code></small>
+
+</footer>
 
 
 </body>
